@@ -1,9 +1,9 @@
 
 namespace SingletonLogger;
 
-public class DateWithTimeStrategy : IFormatDateStrategy
+public class DateWithTimeFormat : IDateFormatter
 {
-    public string GetDate()
+    public string FormatDate()
     {
         return DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
     }

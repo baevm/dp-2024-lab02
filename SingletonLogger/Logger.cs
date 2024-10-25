@@ -52,8 +52,8 @@ public sealed class Logger
         }
     }
 
-    private static IFormatDateStrategy _dateFormatter = new DateWithTimeStrategy();
-    public static IFormatDateStrategy DateFormatter
+    private static IDateFormatter _dateFormatter = new DateWithTimeFormat();
+    public static IDateFormatter DateFormatter
     {
         get
         {
@@ -96,7 +96,7 @@ public sealed class Logger
     {
         _WMutex.WaitOne();
 
-        var date = DateFormatter.GetDate();
+        var date = DateFormatter.FormatDate();
         var logMessage = MessageFormatter.FormatMessage(date, level, message);
 
         StreamWriter.WriteLine(logMessage);
