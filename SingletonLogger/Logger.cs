@@ -28,8 +28,8 @@ public sealed class Logger
         }
     }
 
-    private static IFormatMessageStrategy _messageFormatter = new LowercaseMessageStrategy();
-    public static IFormatMessageStrategy MessageFormatter
+    private static IMessageFormatter _messageFormatter = new LowerCaseMessageFormatter();
+    public static IMessageFormatter MessageFormatter
     {
         get
         {

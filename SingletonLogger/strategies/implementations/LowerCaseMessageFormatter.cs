@@ -1,6 +1,6 @@
 namespace SingletonLogger;
 
-public class LowercaseMessageStrategy : IFormatMessageStrategy
+public class LowerCaseMessageFormatter : IMessageFormatter
 {
     public string FormatMessage(string date, LogLevel level, string message)
     {

@@ -56,7 +56,7 @@ public class LoggerTest
         #endregion
 
         #region Запись uppercase
-        Logger.MessageFormatter = new UppercaseMessageStrategy();
+        Logger.MessageFormatter = new UppercaseMessageFormatter();
 
         logger.LogInfo(message);
 

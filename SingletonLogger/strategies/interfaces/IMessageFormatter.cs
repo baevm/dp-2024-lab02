@@ -1,6 +1,6 @@
 namespace SingletonLogger;
 
-public interface IFormatMessageStrategy
+public interface IMessageFormatter
 {
     string FormatMessage(string date, LogLevel level, string message);
 }

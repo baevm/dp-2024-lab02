@@ -29,7 +29,7 @@ internal class Program
     {
         var fileName = $"DP.P1.{DateTime.Now.ToString("yyyy-MM-dd.HH-mm-ss")}.log";
         var logFileStrategy = new StreamWriter(fileName);
-        var uppercaseLogStrategy = new UppercaseMessageStrategy();
+        var uppercaseLogStrategy = new UppercaseMessageFormatter();
 
         Logger.StreamWriter = logFileStrategy;
         Logger.MessageFormatter = uppercaseLogStrategy;
